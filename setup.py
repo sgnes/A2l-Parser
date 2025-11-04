@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="A2l Parser", # Replace with your own username
+    name="PyA2lParser", # Replace with your own username
     version="0.0.1",
     author="Sgnes",
     author_email="sgnes0514@gmai.com",
