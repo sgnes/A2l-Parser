@@ -1101,31 +1101,3 @@ class A2LParser:
         return model
 
 
-# --------------------------
-# CLI helper (optional)
-# --------------------------
-
-def main():
-
-    parser = A2LParser()
-    model = parser.parse_file("D902_00_VW_P_V00_C00_W1_DA_SFW_LUK.a2l")
-    print(f"Project: {model.project_name} | Module: {model.module_name}")
-    print(f"Protocol Layer parsed: {model.protocol_layer is not None}")
-    print(f"DAQ events: {len(model.daq_events)}")
-    print(f"XCP on CAN parsed: {model.xcp_on_can is not None}")
-    print(f"Memory segments: {len(model.memory_segments)}")
-    print(f"AXIS_PTS: {len(model.axis_pts)}")
-    print(f"Measurements: {len(model.measurements)}")
-    print(f"Characteristics: {len(model.characteristics)}")  # NEW
-    print(f"Record layouts: {len(model.record_layouts)}")
-    if model.characteristics:
-        c = model.characteristics[0]
-        print("First CHARACTERISTIC:", c.name, c.char_type, hex(c.address or 0), c.record_layout, c.compu_method)
-    if model.daq_events:
-        print("First DAQ event:", model.daq_events[0])
-    if model.axis_pts:
-        print("First AXIS_PTS:", model.axis_pts[0].name, hex(model.axis_pts[0].address or 0))
-
-
-if __name__ == "__main__":
-    main()
