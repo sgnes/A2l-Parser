@@ -2,15 +2,15 @@ import sys
 import unittest
 
 
-from a2lparser.a2l_parser import A2LParser
+from src.a2l_model import A2LParser
 
 class TestA2LParser(unittest.TestCase):
 
-    def setUp(self):
+    def setUp(self)->None:
         self.model = A2LParser().parse_file("test\demo.a2l")
         return super().setUp()
 
-    def test_parse_text(self):
+    def test_parse_text(self)->None:
         self.assertEqual(len(self.model.measurements), 2)
         self.assertEqual(self.model.measurements[0].ecu_address, 0x4000D944)
         self.assertEqual(self.model.measurements[0].name, 'Testvar1')
