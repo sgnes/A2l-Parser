@@ -2,9 +2,12 @@
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+packages = ["a2lmodel"]
+
 [project]
-name = "PyA2lModel"
-version = "0.0.1"
+name = "a2lmodel"
+version = "0.0.2"
 authors = [
     {name = "Sgnes", email = "sgnes0514@gmail.com"}
 ]

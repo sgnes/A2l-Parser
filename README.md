@@ -27,7 +27,7 @@ A comprehensive Python library for parsing and modeling ASAP2 (.a2l) files with 
 Ensure Python 3.7+ is installed.
 
 ```bash
-pip install pya2lmodel
+pip install a2lmodel
 ```
 
 ## Basic Usage
@@ -35,7 +35,7 @@ pip install pya2lmodel
 ### Parsing A2L Files
 
 ```python
-from a2lparser import A2LParser, A2LModel
+from a2lmodel import A2LParser, A2LModel
 
 # Parse an A2L file
 parser = A2LParser()
@@ -80,7 +80,7 @@ if model.measurements:
     model.measurements[0].description = "Modified measurement description"
 
 # Add new characteristics
-from a2lparser.a2l_model import Characteristic
+from a2lmodel import Characteristic
 new_char = Characteristic(
     name="NEW_CALIBRATION",
     description="New calibration parameter",

@@ -3,7 +3,7 @@
 Comprehensive test suite for A2L export functionality.
 """
 
-from src.a2l_model import A2LParser, A2LModel,Characteristic, Measurement
+from a2lmodel import A2LParser, A2LModel,Characteristic, Measurement
 import tempfile
 import os
 import pytest

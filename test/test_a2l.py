@@ -2,7 +2,7 @@ import sys
 import unittest
 
 
-from src.a2l_model import A2LParser
+from a2lmodel import A2LParser
 
 class TestA2LParser(unittest.TestCase):
 
