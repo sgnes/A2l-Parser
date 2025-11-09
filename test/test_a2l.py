@@ -7,7 +7,7 @@ from a2lmodel import A2LParser
 class TestA2LParser(unittest.TestCase):
 
     def setUp(self)->None:
-        self.model = A2LParser().parse_file("test\demo.a2l")
+        self.model = A2LParser().parse_file("test/demo.a2l")
         return super().setUp()
 
     def test_parse_text(self)->None:
